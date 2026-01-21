@@ -1,0 +1,23 @@
+class Employee
+{
+	void displayDetails()
+	{
+		System.out.println("Employee Details");
+	}
+
+}
+ class Manager extends Employee
+{
+	void displayDetails()
+	{
+		System.out.println("Manager Details with Team Size");
+	}
+	public static void main(String []args)
+	{
+		Employee e = new Employee();
+		Employee m = new Manager();
+		
+		e.displayDetails();
+		m.displayDetails();
+	}
+}
