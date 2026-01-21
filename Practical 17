@@ -1,0 +1,33 @@
+public class University
+{
+	static int totalStudents;
+	static String universityName;
+	
+	// Static block
+	
+	static {
+		universityName = "GTU University";
+		totalStudents = 0;
+		System.out.println("Static block executed");
+		}
+		
+		// Constructor
+		University()
+		{
+			totalStudents++;
+			System.out.println("Student object created");
+		}
+		static void getTotalStudents()
+		{
+			System.out.println("Total Students:" + totalStudents);
+		}
+		public static void main(String[] args)
+		{
+			University s1 = new University();
+			University s2 = new University();
+			University s3= new University();
+				
+			System.out.println("University Name:" + universityName);
+			getTotalStudents();
+		}
+}
