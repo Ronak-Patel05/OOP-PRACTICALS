@@ -1,0 +1,26 @@
+class Vehicle {
+    protected String vehicleNumber;
+    protected String brand;
+    protected String fuelType;
+
+    // Constructor
+    Vehicle(String vehicleNumber, String brand, String fuelType) {
+        this.vehicleNumber = vehicleNumber;
+        this.brand = brand;
+        this.fuelType = fuelType;
+    }
+
+    void displayDetails() {
+        System.out.println("Vehicle Number: " + vehicleNumber);
+        System.out.println("Brand: " + brand);
+        System.out.println("Fuel Type: " + fuelType);
+    }
+}
+
+// Subclass Car
+class Car extends Vehicle {
+    int numberOfSeats;
+    boolean ACavailable;
+
+    Car(String vehicleNumber, String brand, String fuelType, int numberOfSeats, boolean ACavailable) {
+        super(vehicleNumber, brand, fuelType); // constructor chaining
