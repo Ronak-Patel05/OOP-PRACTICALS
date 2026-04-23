@@ -1,0 +1,52 @@
+interface Exam
+{
+	Boolean isPassed(int mark);
+}
+interface Classify
+{
+	String getDivision(double average);
+}
+
+class Result implements Exam, Classify
+{
+	public Boolean isPassed(int mark)
+	{
+		if(mark >= 40)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	public String getDivision(double average)
+	{
+		if (average >= 60)
+		{
+			return "First Division";
+		}
+		else if (average >= 50)
+		{
+			return "Second Division";		}
+		else
+		{
+			return "Fail";
+		}
+	}
+}
+public class Practical28
+{
+	public static void main(String []args)
+	{
+		Result r = new Result();
+		
+		int marks = 65;
+		double average = 62.5;
+		
+		System.out.println("Marks:" + marks);
+		System.out.println("Passed: " + r.isPassed(marks));
+		System.out.println("Average: " + average);
+		System.out.println("Division: " + r.getDivision(average));
+	}
+}
